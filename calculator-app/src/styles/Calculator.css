@@ -1,0 +1,25 @@
+.text {
+    width: 350px;
+    height: 500px;
+    /* Center vertically and horizontally */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.button {
+    position: relative;
+    top: 20%;
+    left: 68%;
+    transform: translate(-50%, -50%);
+}
+
+.buttonCalc {
+    position: absolute;
+    top: 20vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+
+}
