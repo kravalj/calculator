@@ -4,6 +4,6 @@ import Calculator from "./calculator";
 
 export const CalculatorAPI = {
 
-    getCalculateRecord: () =>
+    getCalculateRecord: (calculator: Calculator) =>
         axios_api.authorizedRequests.get<Calculator[]>(`${CALCULATOR_API}/calculate`)
 }
