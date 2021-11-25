@@ -12,10 +12,10 @@ class CalculatorServiceTest {
 
     @Test
     public void calculate() {
-        CalculatorRecord calculatorRecordList = calculatorService.calculate(200000, 7.9, 11);
+        CalculatorRecord calculatorRecord = calculatorService.calculate(200000, 7.9, 11);
 
-        System.out.println("Mesicni splatka: " + calculatorRecordList.getLengthLoan() + ", "
-                + "Preplatok: " + calculatorRecordList.getOverPayment() + ", " + "Celkova castka: " + calculatorRecordList.getFinalAmount());
+        System.out.println("Mesicni splatka: " + calculatorRecord.getMonthlyPayment() + ", "
+                + "Preplatok: " + calculatorRecord.getOverPayment() + ", " + "Celkova castka: " + calculatorRecord.getFinalAmount());
 
     }
 

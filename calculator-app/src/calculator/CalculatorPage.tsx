@@ -1,13 +1,15 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import '../styles/Calculator.css';
 import {Card} from "@mui/material";
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import { Link } from "react-router-dom"
+import Calculator from "./calculator";
 
+const CalculatorPage = () => {
 
-const Calculator = () => {
+    const [calculatorRecord, setCalculatorRecord] = useState<Calculator[]>([])
 
     return (
         <div >
@@ -20,7 +22,7 @@ const Calculator = () => {
                   noValidate
                   autoComplete="off"
               >
-                  <TextField id="outlined-basic" label="Loan" variant="outlined" />
+                  <TextField id="outlined-basic" label='Loan' variant="outlined"/>
               </Box>
 
               <Box className='button'
@@ -31,7 +33,7 @@ const Calculator = () => {
                   noValidate
                   autoComplete="off"
               >
-                  <TextField id="outlined-basic" label="Interest rate" variant="outlined" />
+                  <TextField id="outlined-basic" label="Interest rate" variant="outlined"/>
               </Box>
 
               <Box className='button'
@@ -42,11 +44,11 @@ const Calculator = () => {
                   noValidate
                   autoComplete="off"
               >
-                  <TextField id="outlined-basic" label="Amount of payments" variant="outlined" />
+                  <TextField id="outlined-basic" label="Amount of payments" variant="outlined"/>
               </Box>
               <div>
                   <Link to="/AnswerPage" style={{textDecoration: 'none'}}>
-                  <Button variant="outlined" size="large" className='buttonCalc' style={{backgroundColor: 'lightblue'}}>
+                  <Button variant="outlined" size="large" className='buttonCalc' style={{backgroundColor: 'lightblue'}} >
                       Calculate
                   </Button>
                   </Link>
@@ -56,4 +58,4 @@ const Calculator = () => {
     );
 }
 
-export default Calculator;
+export default CalculatorPage;

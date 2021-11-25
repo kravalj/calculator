@@ -3,8 +3,8 @@ import './App.css';
 import {BrowserRouter as Router, Route, Switch, Link, Redirect} from "react-router-dom"
 
 //Pages
-import Calculator from "./pages/Calculator"
-import AnswerPage from "./pages/AnswerPage"
+import CalculatorPage from "./calculator/CalculatorPage"
+import AnswerPage from "./calculator/CalculatorView"
 
 
 
@@ -14,7 +14,7 @@ class App extends Component {
 
         <Router>
           <Switch>
-            <Route exact path="/" component={Calculator}/>
+            <Route exact path="/" component={CalculatorPage}/>
               <Route exact path="/AnswerPage" component={AnswerPage}/>
             <Redirect to="/404"/>
           </Switch>
