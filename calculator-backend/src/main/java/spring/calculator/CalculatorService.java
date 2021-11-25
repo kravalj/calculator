@@ -10,15 +10,15 @@ public class CalculatorService {
         final byte monYear = 12;
         final byte percentage = 100;
 
-        double monthlyPayment = (loanSize * (monthlyInterestRate / (monYear * percentage)))
-                / (1- Math.pow(1 + (monthlyInterestRate / (monYear * percentage)), (-12 * amountOfPayments)) );
+        double lengthLoan = (loanSize * (monthlyInterestRate / (monYear * percentage)))
+                / (1- Math.pow(1 + (monthlyInterestRate / (monYear * percentage)), (-amountOfPayments)) );
 
-        double finalAmount = (amountOfPayments * monYear) * monthlyPayment;
+        double finalAmount = (amountOfPayments * monYear) * lengthLoan;
 
         double overPayment = finalAmount - loanSize;
 
         return new CalculatorRecord(
-                Math.round(monthlyPayment), Math.round(finalAmount), Math.round(overPayment)
+                Math.round(lengthLoan), Math.round(finalAmount), Math.round(overPayment)
         );
     }
 
